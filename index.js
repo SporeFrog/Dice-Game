@@ -30,9 +30,12 @@ function diceGame(){
   }else if(result2 === 6){
     document.querySelector(".dice2").innerHTML = "<i class='fas fa-dice-six'></i>";
   }
-
+  if(result1 > result2){
+    document.querySelector(".result").textContent = "Blue Wins!";
+  }else if(result1 < result2){
+    document.querySelector(".result").textContent = "Red Wins!";
+  }else if(result1 === result2){
+    document.querySelector(".result").textContent = "It's a draw!";
+  }
 }
 
-function test(){
-  document.querySelector(".dice1").innerHTML = "<i class='fas fa-dice-three'></i>";
-}
